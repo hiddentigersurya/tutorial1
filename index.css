@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+.imgs {
+    height: 50px;
+    width: 300px;
+    margin: 8px;
+    margin-bottom: 8px;
+}
+
+.p1 {
+    color: grey;
+    margin-left: 10px;
+}
+
+.p2 {
+    color: grey;
+    font-weight: 500px;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.h1 {
+    font-size: 22px;
+    color: darkblue;
+}
+
+.mini {
+    display: flex;
+    align-items: center;
+}
+
+.footer {
+    padding: 30px;
+    padding-top: 20px;
+}
+
+.touch {
+    margin-top: 40px;
+}
+
+.links {
+    margin-top: 15px;
+}
+
+.social {
+    display: flex;
+    justify-content: space-around;
+    width: 100px;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+
+
+.btn {
+    height: 90px;
+    width: 350px;
+    font-family: 'Roboto';
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 4px skyblue;
+    margin: 10px;
+    margin-top: 14px;
+    font-size: 40px;
+    font-weight: 900;
+    color: blue;
+    border-color: blue;
+
+}
+
+.header {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Roboto';
+    background-color: white;
+}
+
+.logo {
+    height: 38px;
+    width: 145px;
+}
+
+.ul {
+    display: flex;
+    justify-content: space-between;
+    width: 45vw;
+    align-items: center;
+    list-style-type: none;
+    font-weight: 520;
+    font-size: 17px;
+    padding-top: 15px;
+}
+
+.sap {
+    margin-right: 1px;
+}
+
+.logout {
+    height: 36px;
+    width: 120px;
+    color: white;
+    border-radius: 6px;
+    border-width: 0px;
+    background-color: blue;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.anime {
+    animation: skyChange 60s linear infinite;
+    background: deepskyblue;
+}
+
+/* Container - Sky*/
+#sky {
+    display: flex;
+    flex-direction: column;
+
+    width: 100vw;
+    height: 90vh;
+}
+
+/* Standard syntax */
+@keyframes skyChange {
+    0% {
+        background: deepskyblue;
+    }
+
+    25% {
+        background: deepskyblue;
+    }
+
+    32% {
+        background: aliceblue;
+    }
+
+    41% {
+        background: deepskyblue;
+    }
+
+    70% {
+        background: deepskyblue;
+    }
+
+    100% {
+        background: #00d2ff;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right,
+                #3a7bd5,
+                #00d2ff);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right,
+                #3a7bd5,
+                #00d2ff);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+}
+
+/* Sun  */
+.theSun {
+    opacity: 1;
+    box-shadow: 0px 0px 15px 3px yellow;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    padding-top: 20px;
+    top: 18vh;
+    left: 35vw;
+    animation: sunpulse 2s alternate infinite;
+    border-radius: 50%;
+    background-image: radial-gradient(circle, #ffd200 95%, #f7971e);
+}
+
+@keyframes sunpulse {
+    from {
+        box-shadow: 0 0 100px #ff0, 0 0 100px #ff0;
+    }
+
+    to {
+        box-shadow: 0 0 25px #ff0, 0 0 75px #ff0;
+    }
+}
+
+/* Clouds */
+.cloudwrapperOne,
+.cloudwrapperTwo,
+.cloudwrapperThree {
+    animation: movecloudsoversky 60s linear infinite;
+    animation-delay: -1s;
+    z-index: 2001;
+}
+
+.cloudwrapperTwo {
+    animation-delay: -10s;
+
+}
+
+.cloudwrapperThree {
+    animation-delay: -19s;
+}
+
+.cloud {
+    width: 200px;
+    height: 60px;
+    background: white;
+    position: relative;
+    border-radius: 200px;
+    z-index: 2000;
+}
+
+.cloud:before,
+.cloud:after {
+    content: "";
+    background: white;
+    position: absolute;
+    width: 100px;
+    height: 80px;
+    top: -15px;
+    left: 10px;
+    border-radius: 100px;
+    transform: rotate(30deg);
+}
+
+.cloud:after {
+    width: 120px;
+    height: 120px;
+    top: -55px;
+    left: auto;
+    right: 15px;
+}
+
+.c1 {
+    margin-top: 20px;
+    animation-delay: -2s;
+}
+
+.c2 {
+    margin-top: 25px;
+    animation-delay: -18s;
+}
+
+.c3 {
+    margin-top: 30px;
+    animation-delay: -7s;
+}
+
+@keyframes movecloudsoversky {
+    0% {
+        transform: translate(-25%, 10vh);
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translate(125%, 10vh);
+        opacity: 0.4;
+    }
+}
+
+/* for the pen */
+
+
+/* waves */
+.ocean {
+    height: 160px;
+    /* change the height of the waves here */
+    width: 100%;
+    position: absolute;
+    align-self: flex-end;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-x: hidden;
+}
+
+.wave {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 88.7'%3E%3Cpath d='M800 56.9c-155.5 0-204.9-50-405.5-49.9-200 0-250 49.9-394.5 49.9v31.8h800v-.2-31.6z' fill='%23003F7C'/%3E%3C/svg%3E");
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(2) {
+    bottom: 0;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.5;
+}
+
+.wave:nth-of-type(3) {
+    bottom: 0;
+    animation: wave 20s -1s linear infinite;
+    opacity: 0.5;
+}
+
+@keyframes wave {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Sun rays */
+
+.ray_box {
+    position: absolute;
+    margin: auto;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 70px;
+    animation: ray_anim 120s linear infinite;
+}
+
+.ray {
+    background: -webkit-linear-gradient(top,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.8) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(top,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.8) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    margin-left: 10px;
+    border-radius: 80% 80% 0 0;
+    position: absolute;
+    opacity: 0.1;
+}
+
+.ray1 {
+    height: 170px;
+    width: 30px;
+    transform: rotate(180deg);
+    top: -175px;
+    left: 15px;
+}
+
+.ray2 {
+    height: 100px;
+    width: 8px;
+    transform: rotate(220deg);
+    top: -90px;
+    left: 75px;
+}
+
+.ray3 {
+    height: 170px;
+    width: 50px;
+    transform: rotate(250deg);
+    top: -80px;
+    left: 100px;
+}
+
+.ray4 {
+    height: 120px;
+    width: 14px;
+    transform: rotate(305deg);
+    top: 30px;
+    left: 100px;
+}
+
+.ray5 {
+    height: 140px;
+    width: 30px;
+    transform: rotate(-15deg);
+    top: 60px;
+    left: 40px;
+}
+
+.ray6 {
+    height: 90px;
+    width: 50px;
+    transform: rotate(30deg);
+    top: 60px;
+    left: -40px;
+}
+
+.ray7 {
+    height: 180px;
+    width: 10px;
+    transform: rotate(70deg);
+    top: -35px;
+    left: -40px;
+}
+
+.ray8 {
+    height: 120px;
+    width: 30px;
+    transform: rotate(100deg);
+    top: -45px;
+    left: -90px;
+}
+
+.ray9 {
+    height: 80px;
+    width: 10px;
+    transform: rotate(120deg);
+    top: -65px;
+    left: -60px;
+}
+
+.ray10 {
+    height: 190px;
+    width: 23px;
+    transform: rotate(150deg);
+    top: -185px;
+    left: -60px;
+}
+
+@keyframes ray_anim {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
